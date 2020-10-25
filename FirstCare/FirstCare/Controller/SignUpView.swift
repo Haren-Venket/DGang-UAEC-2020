@@ -60,6 +60,7 @@ class SignUpView: UIViewController, UITextFieldDelegate, UITextViewDelegate, MFM
                         if let e = error {
                             print("There was an issue saving data to firestore, \(e)")
                         } else {
+                            
                             print("success")
             
                         }
@@ -71,16 +72,23 @@ class SignUpView: UIViewController, UITextFieldDelegate, UITextViewDelegate, MFM
 
         if let navController = self.navigationController{
             navController.popViewController(animated: true)
+                
+            
         }
         
         
     }
+    
+
+    
     func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["sazimi@ualberta.ca"])
-            mail.setMessageBody(previousMedField.text, isHTML: true)
+        
+            mail.setToRecipients(["lmy19981226@gmail.com"])
+            
+            mail.setMessageBody("healthID:" + personalHealthField.text! + "<br/>Name:" + nameField.text!, isHTML: true)
 
             present(mail, animated: true)
         } else {

@@ -40,33 +40,34 @@ class ViewController: UIViewController {
 //    }
     
     @IBAction func authenticateTapped(_ sender: Any) {
-//        let context = LAContext()
-//        var error: NSError?
-//
-//        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-//            let reason = "Identify yourself!"
-//
-//            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
-//                [weak self] success, authenticationError in
-//
-//                DispatchQueue.main.async {
-//                    if success {
+        let context = LAContext()
+        var error: NSError?
 
-//                    } else {
-//                        // error
-//
-//                }
-//                }
-//
-//            }
-//        } else {
-//            print("issue with auth")
-//
-//        }
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Identify yourself!"
+
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                [weak self] success, authenticationError in
+
+                DispatchQueue.main.async {
+                    if success {
+                        self!.performSegue(withIdentifier: "contactEmergency", sender: self)
+                        guard let number = URL(string: "tel://" + "7806048907") else { return }
+                        UIApplication.shared.open(number)
+
+                    } else {
+                        // error
+
+                }
+                }
+
+            }
+        } else {
+            print("issue with auth")
+
+        }
         
-        self.performSegue(withIdentifier: "contactEmergency", sender: self)
-        guard let number = URL(string: "tel://" + "5877781100") else { return }
-        UIApplication.shared.open(number)
+
         
     }
 
