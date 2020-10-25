@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void emergency(View view) {
-        Intent intent = new Intent(this, EmergencyActivity.class);
+        Intent intent = new Intent(this, MailSenderActivity.class);
         startActivity(intent);
     }
 }
