@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "795180553975",
+    "firebase_url": "https://firstcare-b274b.firebaseio.com",
+    "project_id": "firstcare-b274b",
+    "storage_bucket": "firstcare-b274b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795180553975:android:bf4f74856a73757767a5f2",
+        "android_client_info": {
+          "package_name": "com.example.firstcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795180553975-2rht6qbg0ma455ddivk3493vgmoigb44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF0sYboNHb3CpJlblf1xu1a8MBwvlaCdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795180553975-2rht6qbg0ma455ddivk3493vgmoigb44.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
