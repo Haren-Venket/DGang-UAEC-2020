@@ -21,4 +21,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SignUpActivity.class);
         startActivity(intent);
     }
+
+    public void emergency(View view) {
+        Intent intent = new Intent(this, EmergencyActivity.class);
+        startActivity(intent);
+    }
 }

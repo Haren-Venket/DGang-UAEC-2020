@@ -13,6 +13,7 @@
         android:layout_width="251dp"
         android:layout_height="153dp"
         android:background="@color/design_default_color_error"
+        android:onClick="emergency"
         android:text="EMERGENCY"
         android:textColor="@android:color/background_light"
         android:textSize="30sp"
