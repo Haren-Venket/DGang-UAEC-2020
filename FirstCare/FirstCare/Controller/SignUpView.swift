@@ -7,9 +7,10 @@
 
 import UIKit
 import CoreData
+import Firebase
+import MessageUI
 
-
-class SignUpView: UIViewController, UITextFieldDelegate, UITextViewDelegate {
+class SignUpView: UIViewController, UITextFieldDelegate, UITextViewDelegate, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var personalHealthField: UITextField!
@@ -17,6 +18,7 @@ class SignUpView: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     @IBOutlet weak var addressField: UITextField!
     @IBOutlet weak var contactField: UITextField!
     @IBOutlet weak var previousMedField: UITextView!
+    let db = Firestore.firestore()
     
 
     override func viewDidLoad() {
@@ -50,12 +52,44 @@ class SignUpView: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 //            print("failed saving")
 //        }
         
+        db.collection("medinfo").document(personalHealthField.text!).setData(["name": nameField.text,
+                        "healthInsurance": healthInsuranceField.text,
+                        "address": addressField.text,
+                        "contact": contactField.text,
+                        "prevMed":previousMedField.text ]){ (error) in
+                        if let e = error {
+                            print("There was an issue saving data to firestore, \(e)")
+                        } else {
+                            print("success")
+            
+                        }
+            
+                    }
+        
+        sendEmail()
+        
 
         if let navController = self.navigationController{
             navController.popViewController(animated: true)
         }
         
         
+    }
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["sazimi@ualberta.ca"])
+            mail.setMessageBody(previousMedField.text, isHTML: true)
+
+            present(mail, animated: true)
+        } else {
+            print("unale to male")
+        }
+    }
+
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

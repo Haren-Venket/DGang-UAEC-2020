@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A25572EA4988A977EFAC1AF /* Pods_FirstCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91700FE593E8B14D48A055D /* Pods_FirstCare.framework */; };
+		97D07F4A2546193200927B84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97D07F492546193200927B84 /* GoogleService-Info.plist */; };
 		97D76D412545D65800DEAB97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D76D402545D65800DEAB97 /* AppDelegate.swift */; };
 		97D76D432545D65800DEAB97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D76D422545D65800DEAB97 /* SceneDelegate.swift */; };
 		97D76D452545D65800DEAB97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D76D442545D65800DEAB97 /* ViewController.swift */; };
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		97D07F492546193200927B84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		97D76D3D2545D65800DEAB97 /* FirstCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D76D402545D65800DEAB97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97D76D422545D65800DEAB97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +60,9 @@
 		97D76D952545EDFD00DEAB97 /* data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = data.xcdatamodel; sourceTree = "<group>"; };
 		97D76DAF2545F66000DEAB97 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		97D76DB02545F66000DEAB97 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A06FD1322EFE8B40F6D0F8F8 /* Pods-FirstCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstCare.release.xcconfig"; path = "Target Support Files/Pods-FirstCare/Pods-FirstCare.release.xcconfig"; sourceTree = "<group>"; };
+		A91700FE593E8B14D48A055D /* Pods_FirstCare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstCare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD115BDD0B765827BCDC347D /* Pods-FirstCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstCare.debug.xcconfig"; path = "Target Support Files/Pods-FirstCare/Pods-FirstCare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A25572EA4988A977EFAC1AF /* Pods_FirstCare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		372D829B148F4A57CED0A2F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A91700FE593E8B14D48A055D /* Pods_FirstCare.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		97D76D342545D65800DEAB97 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +108,8 @@
 				97D76D562545D65900DEAB97 /* FirstCareTests */,
 				97D76D612545D65900DEAB97 /* FirstCareUITests */,
 				97D76D3E2545D65800DEAB97 /* Products */,
+				EC5C787DD0FF8B17AAF83F4D /* Pods */,
+				372D829B148F4A57CED0A2F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +126,7 @@
 		97D76D3F2545D65800DEAB97 /* FirstCare */ = {
 			isa = PBXGroup;
 			children = (
+				97D07F492546193200927B84 /* GoogleService-Info.plist */,
 				97D76D932545EDB700DEAB97 /* Model */,
 				97D76D742545E30900DEAB97 /* View */,
 				97D76D732545E2EC00DEAB97 /* Controller */,
@@ -164,6 +182,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EC5C787DD0FF8B17AAF83F4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD115BDD0B765827BCDC347D /* Pods-FirstCare.debug.xcconfig */,
+				A06FD1322EFE8B40F6D0F8F8 /* Pods-FirstCare.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97D76D672545D65900DEAB97 /* Build configuration list for PBXNativeTarget "FirstCare" */;
 			buildPhases = (
+				3E18131D43BC0BEA838FCCD2 /* [CP] Check Pods Manifest.lock */,
 				97D76D392545D65800DEAB97 /* Sources */,
 				97D76D3A2545D65800DEAB97 /* Frameworks */,
 				97D76D3B2545D65800DEAB97 /* Resources */,
+				6F2E589BB8B210C85BB84735 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97D76D4D2545D65800DEAB97 /* LaunchScreen.storyboard in Resources */,
+				97D07F4A2546193200927B84 /* GoogleService-Info.plist in Resources */,
 				97D76D4A2545D65800DEAB97 /* Assets.xcassets in Resources */,
 				97D76D482545D65800DEAB97 /* Main.storyboard in Resources */,
 			);
@@ -288,6 +318,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E18131D43BC0BEA838FCCD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirstCare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F2E589BB8B210C85BB84735 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirstCare/Pods-FirstCare-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirstCare/Pods-FirstCare-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirstCare/Pods-FirstCare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		97D76D392545D65800DEAB97 /* Sources */ = {
@@ -473,6 +545,7 @@
 		};
 		97D76D682545D65900DEAB97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD115BDD0B765827BCDC347D /* Pods-FirstCare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -492,6 +565,7 @@
 		};
 		97D76D692545D65900DEAB97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A06FD1322EFE8B40F6D0F8F8 /* Pods-FirstCare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
